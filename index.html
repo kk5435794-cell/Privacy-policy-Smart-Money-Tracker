@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Smart Expense Manager</title>
+  <style>
+    :root {
+      --primary: #1E3A8A;
+      --primary-dark: #0A192F;
+      --secondary: #0284C7;
+      --accent: #10B981;
+      --bg: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --text: #0F172A;
+      --text-muted: #64748B;
+      --border: #E2E8F0;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      padding: 0;
+      margin: 0;
+    }
+    header {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+      color: #FFFFFF;
+      padding: 48px 20px;
+      text-align: center;
+    }
+    .header-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    header h1 {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    header p {
+      font-size: 16px;
+      color: #E2E8F0;
+      max-width: 600px;
+      margin: 0 auto 16px;
+    }
+    .app-meta {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: #CBD5E1;
+      margin-top: 12px;
+    }
+    .app-meta span {
+      background: rgba(0, 0, 0, 0.2);
+      padding: 4px 12px;
+      border-radius: 6px;
+    }
+    .container {
+      max-width: 860px;
+      margin: -24px auto 60px;
+      padding: 0 16px;
+    }
+    .lang-switch {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 8px;
+      display: flex;
+      gap: 8px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    }
+    .lang-btn {
+      flex: 1;
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: none;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s ease;
+      background: transparent;
+      color: var(--text-muted);
+    }
+    .lang-btn.active {
+      background: var(--primary);
+      color: #FFFFFF;
+      box-shadow: 0 2px 4px rgba(30, 58, 138, 0.2);
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 12px -2px rgba(0,0,0,0.05);
+    }
+    .toc {
+      background: #EFF6FF;
+      border: 1px solid #BFDBFE;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 28px;
+    }
+    .toc h3 {
+      font-size: 16px;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+    .toc ul {
+      list-style-type: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 8px;
+    }
+    .toc a {
+      color: var(--secondary);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .toc a:hover {
+      text-decoration: underline;
+    }
+    h2 {
+      font-size: 20px;
+      color: var(--primary-dark);
+      margin-top: 32px;
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #F1F5F9;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    h2:first-of-type {
+      margin-top: 0;
+    }
+    h3 {
+      font-size: 16px;
+      color: var(--primary);
+      margin-top: 16px;
+      margin-bottom: 8px;
+    }
+    p, li {
+      color: #334155;
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+    ul, ol {
+      padding-left: 24px;
+      margin-bottom: 16px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    .highlight-box {
+      background: #F0FDF4;
+      border-left: 4px solid var(--accent);
+      padding: 16px;
+      border-radius: 0 8px 8px 0;
+      margin: 16px 0;
+    }
+    .highlight-box.warning {
+      background: #FEF3C7;
+      border-left-color: #F59E0B;
+    }
+    .highlight-box p {
+      margin: 0;
+      color: #1E293B;
+      font-size: 14px;
+    }
+    .contact-box {
+      background: #F8FAFC;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 24px;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 8px;
+      font-size: 15px;
+    }
+    .contact-item strong {
+      min-width: 120px;
+    }
+    footer {
+      text-align: center;
+      padding: 24px 16px 40px;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+    .play-console-guide {
+      background: #FAF5FF;
+      border: 1px dashed #C084FC;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 32px;
+      font-size: 14px;
+    }
+    .play-console-guide h4 {
+      color: #7E22CE;
+      margin-bottom: 8px;
+    }
+    @media (max-width: 600px) {
+      header {
+        padding: 32px 16px;
+      }
+      header h1 {
+        font-size: 24px;
+      }
+      .card {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-badge">Google Play Console Compliant</div>
+    <h1>Privacy Policy</h1>
+    <p>Smart Expense Manager – Personal Finance, EMI & Payment Tracker</p>
+    <div class="app-meta">
+      <span><strong>Package:</strong> com.aistudio.smartexpense.kpztqx</span>
+      <span><strong>Effective Date:</strong> October 9, 2026</span>
+      <span><strong>Developer Contact:</strong> kk5435794@gmail.com</span>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- Language Selector -->
+    <div class="lang-switch">
+      <button class="lang-btn active" id="btn-en" onclick="showLang('en')">English</button>
+      <button class="lang-btn" id="btn-hi" onclick="showLang('hi')">हिन्दी (Hindi)</button>
+    </div>
+
+    <!-- ENGLISH VERSION -->
+    <div id="content-en" class="card">
+      <div class="toc">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li><a href="#en-1">1. Introduction & Overview</a></li>
+          <li><a href="#en-2">2. Zero Banking Credentials Policy</a></li>
+          <li><a href="#en-3">3. Information Collected & Managed</a></li>
+          <li><a href="#en-4">4. Local Storage & Zero Server Sync</a></li>
+          <li><a href="#en-5">5. Advertising (Google AdMob)</a></li>
+          <li><a href="#en-6">6. Device Permissions</a></li>
+          <li><a href="#en-7">7. Data Retention & Deletion</a></li>
+          <li><a href="#en-8">8. Children's Privacy (COPPA)</a></li>
+          <li><a href="#en-9">9. Security Measures</a></li>
+          <li><a href="#en-10">10. Contact Us</a></li>
+        </ul>
+      </div>
+
+      <section id="en-1">
+        <h2>1. Introduction & Overview</h2>
+        <p>This Privacy Policy applies to the <strong>Smart Expense Manager</strong> mobile application (the "App"), package identifier <code>com.aistudio.smartexpense.kpztqx</code>, developed and operated by the developer ("we", "us", or "our").</p>
+        <p>We respect your privacy and are committed to protecting your personal data. This Privacy Policy outlines our practices concerning data handling, storage, permissions, and advertising to comply with the Google Play Developer Program Policies, the General Data Protection Regulation (GDPR), and applicable privacy legislation.</p>
+      </section>
+
+      <section id="en-2">
+        <h2>2. Zero Banking Credentials Policy</h2>
+        <div class="highlight-box">
+          <p><strong>Strict Financial Protection Guarantee:</strong> Smart Expense Manager is a personal offline ledger. We <strong>NEVER</strong> request, access, collect, transmit, or store sensitive banking passwords, Internet banking credentials, UPI PINs, ATM debit/credit card PINs, CVV codes, or One-Time Passwords (OTPs).</p>
+        </div>
+        <p>Payment method tags (such as UPI, Cash, Debit Card, Credit Card, or Bank Transfer) chosen within the application are strictly descriptive labels for your own personal accounting.</p>
+      </section>
+
+      <section id="en-3">
+        <h2>3. Information Collected & Managed</h2>
+        <p>All data managed inside the application is provided voluntarily by you for budgeting and personal bookkeeping purposes:</p>
+        <ul>
+          <li><strong>Expense & Income Records:</strong> Amounts, transaction dates, titles, custom categories, payment method labels, and optional user notes.</li>
+          <li><strong>Loan & EMI Details:</strong> Loan names, financial institution names, total installments, paid installments, monthly EMI amount, and due dates.</li>
+          <li><strong>Personal Lending & Borrowing:</strong> Contact name, optional phone number, amount lent or borrowed, expected repayment dates, and notes.</li>
+          <li><strong>Staff & Worker Ledgers:</strong> Worker name, job title, daily/monthly wage amounts, advance payments, and payment history.</li>
+          <li><strong>Travel Expenses:</strong> Trip titles, destinations, allocated budget, and categorized travel expenses.</li>
+        </ul>
+      </section>
+
+      <section id="en-4">
+        <h2>4. Local Storage & Zero Server Sync</h2>
+        <div class="highlight-box">
+          <p><strong>100% On-Device Storage:</strong> All your financial calculations and ledger records are stored entirely on your local device using a private, sandboxed SQLite Room database.</p>
+        </div>
+        <p>We do not operate any proprietary cloud servers, remote databases, or sync APIs. Your financial ledger data is never transmitted to our developers or any third-party data broker.</p>
+      </section>
+
+      <section id="en-5">
+        <h2>5. Advertising (Google AdMob SDK)</h2>
+        <p>To keep the application free for all users, Smart Expense Manager integrates with <strong>Google AdMob</strong> (Google Mobile Ads SDK) to serve advertisements (Banner and Interstitial ads).</p>
+        <p>The Google Mobile Ads SDK may collect and process certain device and diagnostic data in accordance with Google's policies, including:</p>
+        <ul>
+          <li><strong>Device Identifiers:</strong> Google Advertising ID (GAID / AAID), IP address, and general device specifications (device model, operating system version).</li>
+          <li><strong>Performance & Analytics:</strong> Ad impression data, click metrics, crash logs, and diagnostic telemetry for ad fraud prevention and delivery optimization.</li>
+        </ul>
+        <p>For further details on how Google processes ad data, please review Google's official privacy documentation:</p>
+        <ul>
+          <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a></li>
+          <li><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google Advertising Technologies & Policy</a></li>
+        </ul>
+        <p>You can manage personalized advertising preferences on your Android device anytime by navigating to <em>Settings &rarr; Google &rarr; Ads &rarr; Reset or Delete advertising ID</em>.</p>
+      </section>
+
+      <section id="en-6">
+        <h2>6. Device Permissions</h2>
+        <p>The application requests only minimal, necessary Android system permissions:</p>
+        <ul>
+          <li><strong>INTERNET & ACCESS_NETWORK_STATE:</strong> Required by the Google Mobile Ads SDK to request and display advertisements.</li>
+          <li><strong>POST_NOTIFICATIONS:</strong> Optional on Android 13+ (API 33+). Used exclusively to deliver local reminders for upcoming EMI due dates, bill due dates, and budget threshold alerts. You can toggle reminders on or off at any time in the in-app Settings menu.</li>
+        </ul>
+      </section>
+
+      <section id="en-7">
+        <h2>7. Data Retention, Export & Deletion Rights</h2>
+        <p>Because all records reside locally on your device, you retain total custody and control over your data:</p>
+        <ul>
+          <li><strong>Data Export:</strong> You can generate and export complete consolidated financial reports in CSV format at any time directly from the Reports tab.</li>
+          <li><strong>Record Deletion:</strong> You can delete any individual transaction, loan, worker, or trip at any time.</li>
+          <li><strong>Complete Eradication:</strong> You can wipe all app data immediately by clearing the app storage in your Android system settings (<em>Settings &rarr; Apps &rarr; Smart Expense Manager &rarr; Clear Storage</em>) or by uninstalling the application.</li>
+        </ul>
+      </section>
+
+      <section id="en-8">
+        <h2>8. Children's Privacy (COPPA Compliance)</h2>
+        <p>Smart Expense Manager is designed for general audiences and individuals managing personal finances and household budgets. The application is not directed at children under the age of 13. We do not knowingly collect personal identifiable information from children under 13.</p>
+      </section>
+
+      <section id="en-9">
+        <h2>9. Security Measures</h2>
+        <p>We prioritize the security of your financial data:</p>
+        <ul>
+          <li>Local data is stored in the private application sandbox provided by the Android OS, preventing other unauthorized apps from accessing your database.</li>
+          <li>No sensitive financial access credentials or bank passwords are ever handled.</li>
+        </ul>
+      </section>
+
+      <section id="en-10">
+        <h2>10. Contact Us & Developer Support</h2>
+        <p>If you have any questions, feedback, or data privacy inquiries regarding this Privacy Policy or the Smart Expense Manager application, please contact us:</p>
+        <div class="contact-box">
+          <div class="contact-item">
+            <strong>Application:</strong> Smart Expense Manager
+          </div>
+          <div class="contact-item">
+            <strong>Package Name:</strong> com.aistudio.smartexpense.kpztqx
+          </div>
+          <div class="contact-item">
+            <strong>Developer Contact:</strong> <a href="mailto:kk5435794@gmail.com">kk5435794@gmail.com</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- HINDI VERSION -->
+    <div id="content-hi" class="card" style="display: none;">
+      <div class="toc">
+        <h3>विषय - सूची (Table of Contents)</h3>
+        <ul>
+          <li><a href="#hi-1">1. परिचय एवं सारांश</a></li>
+          <li><a href="#hi-2">2. कोई संवेदनशील बैंकिंग पासवर्ड नहीं</a></li>
+          <li><a href="#hi-3">4. 100% ऑन-डिवाइस स्थानीय डेटा भंडारण</a></li>
+          <li><a href="#hi-4">5. विज्ञापन नीति (Google AdMob)</a></li>
+          <li><a href="#hi-5">6. ऐप अनुमतियाँ (Permissions)</a></li>
+          <li><a href="#hi-6">7. डेटा हटाने व निर्यात का अधिकार</a></li>
+          <li><a href="#hi-7">8. बच्चों की गोपनीयता</a></li>
+          <li><a href="#hi-8">9. संपर्क करें</a></li>
+        </ul>
+      </div>
+
+      <section id="hi-1">
+        <h2>1. परिचय एवं सारांश</h2>
+        <p>यह गोपनीयता नीति <strong>Smart Expense Manager</strong> (पैकेज आईडी: <code>com.aistudio.smartexpense.kpztqx</code>) मोबाइल एप्लिकेशन पर लागू होती है।</p>
+        <p>हम आपकी गोपनीयता का पूर्ण सम्मान करते हैं और आपकी वित्तीय जानकारी को पूरी तरह सुरक्षित रखने के लिए प्रतिबद्ध हैं। यह दस्तावेज़ बताता है कि ऐप में डेटा कैसे प्रबंधित होता है ताकि Google Play Console की सभी नीतियों का शत-प्रतिशत पालन सुनिश्चित हो सके।</p>
+      </section>
+
+      <section id="hi-2">
+        <h2>2. कोई संवेदनशील बैंकिंग पासवर्ड नहीं (Zero Banking Passwords)</h2>
+        <div class="highlight-box">
+          <p><strong>सख्त वित्तीय सुरक्षा गारंटी:</strong> स्मार्ट एक्सपेंस मैनेजर एक व्यक्तिगत ऑफ़लाइन बहीखाता है। हम <strong>कभी भी</strong> आपके बैंक पासवर्ड, UPI पिन, ATM पिन, डेबिट/क्रेडिट कार्ड CVV या बैंक OTP को नहीं पूछते और न ही संग्रहीत करते हैं।</p>
+        </div>
+        <p>भुगतान माध्यम (जैसे UPI, कैश, कार्ड, बैंक ट्रांसफर) केवल आपके व्यक्तिगत हिसाब-किताब के नामकरण के लिए हैं।</p>
+      </section>
+
+      <section id="hi-3">
+        <h2>3. 100% ऑन-डिवाइस स्थानीय डेटा भंडारण (On-Device Storage)</h2>
+        <div class="highlight-box">
+          <p><strong>स्थानीय सुरक्षा:</strong> आपके सभी लेनदेन, ईएमआई (EMI), उधार, कामगारों की मजदूरी और यात्रा खर्च आपके फ़ोन के सुरक्षित SQLite डेटाबेस में स्थानीय रूप से सहेजे जाते हैं।</p>
+        </div>
+        <p>हमारा कोई निजी क्लाउड सर्वर नहीं है। आपका वित्तीय डेटा कभी भी किसी तीसरे पक्ष को नहीं बेचा या साझा नहीं किया जाता।</p>
+      </section>
+
+      <section id="hi-4">
+        <h2>4. विज्ञापन नीति (Google AdMob Ads)</h2>
+        <p>इस ऐप को सभी उपयोगकर्ताओं के लिए निःशुल्क बनाए रखने के लिए, हम <strong>Google AdMob</strong> (Google Mobile Ads SDK) के माध्यम से बैनर और इंटरस्टीशियल विज्ञापन प्रदर्शित करते हैं।</p>
+        <p>Google AdMob विज्ञापनों के वितरण और धोखाधड़ी से बचाव के लिए तकनीकी डेटा (जैसे Google Advertising ID, डिवाइस मॉडल, क्रैश रिपोर्ट) का उपयोग कर सकता है।</p>
+        <p>अधिक जानकारी के लिए देखें: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google गोपनीयता नीति</a>।</p>
+      </section>
+
+      <section id="hi-5">
+        <h2>5. ऐप अनुमतियाँ (Device Permissions)</h2>
+        <ul>
+          <li><strong>INTERNET:</strong> Google AdMob विज्ञापनों को लोड करने के लिए।</li>
+          <li><strong>POST_NOTIFICATIONS:</strong> केवल आगामी ईएमआई और बजट अलर्ट के स्थानीय रिमाइंडर भेजने के लिए। आप इसे ऐप सेटिंग्स से कभी भी बंद कर सकते हैं।</li>
+        </ul>
+      </section>
+
+      <section id="hi-6">
+        <h2>6. डेटा हटाने व निर्यात का अधिकार (Data Ownership & Deletion)</h2>
+        <ul>
+          <li><strong>डेटा निर्यात:</strong> आप रिपोर्ट्स स्क्रीन से किसी भी समय अपनी पूरी वित्तीय रिपोर्ट CSV फ़ाइल में डाउनलोड या शेयर कर सकते हैं।</li>
+          <li><strong>डेटा हटाना:</strong> आप किसी भी प्रविष्टि को सीधे ऐप में मिटा सकते हैं। ऐप अनइंस्टॉल करने पर सारा डेटा फ़ोन से पूरी तरह नष्ट हो जाता है।</li>
+        </ul>
+      </section>
+
+      <section id="hi-7">
+        <h2>7. बच्चों की गोपनीयता</h2>
+        <p>यह एप्लिकेशन व्यक्तिगत और पारिवारिक बजट प्रबंधन के लिए है और 13 वर्ष से कम आयु के बच्चों के लिए लक्षित नहीं है।</p>
+      </section>
+
+      <section id="hi-8">
+        <h2>8. डेवलपर संपर्क (Contact Us)</h2>
+        <div class="contact-box">
+          <div class="contact-item"><strong>एप्लिकेशन:</strong> Smart Expense Manager</div>
+          <div class="contact-item"><strong>पैकेज आईडी:</strong> com.aistudio.smartexpense.kpztqx</div>
+          <div class="contact-item"><strong>ईमेल:</strong> <a href="mailto:kk5435794@gmail.com">kk5435794@gmail.com</a></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Google Play Console Setup Helper -->
+    <div class="play-console-guide">
+      <h4>How to use this Privacy Policy URL in Google Play Console:</h4>
+      <ol>
+        <li>Host this <code>privacy_policy.html</code> file on GitHub Pages, Google Sites, or any web host.</li>
+        <li>Open the <strong>Google Play Console</strong> &rarr; Select your app <strong>Smart Expense Manager</strong>.</li>
+        <li>In the left sidebar, navigate to <strong>Policy and programs</strong> &rarr; <strong>App content</strong>.</li>
+        <li>Under <strong>Privacy policy</strong>, click <strong>Start</strong> or <strong>Manage</strong> and paste the public URL of this page.</li>
+        <li>Click <strong>Save</strong> to comply with Google Play review standards.</li>
+      </ol>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Smart Expense Manager. All rights reserved.</p>
+    <p>Complies with Google Play Developer Program Policies &bull; Data Safety Disclosures</p>
+  </footer>
+
+  <script>
+    function showLang(lang) {
+      const enContent = document.getElementById('content-en');
+      const hiContent = document.getElementById('content-hi');
+      const btnEn = document.getElementById('btn-en');
+      const btnHi = document.getElementById('btn-hi');
+
+      if (lang === 'hi') {
+        enContent.style.display = 'none';
+        hiContent.style.display = 'block';
+        btnEn.classList.remove('active');
+        btnHi.classList.add('active');
+      } else {
+        enContent.style.display = 'block';
+        hiContent.style.display = 'none';
+        btnHi.classList.remove('active');
+        btnEn.classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>
